@@ -1,0 +1,63 @@
+.game-board {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid #1fea00; /* Bright green border */
+    background-color: #002f06; /* Dark green background */
+    width: 400px;
+    height: 400px;
+    margin: 20px auto;
+    position: relative;
+  }
+  
+  .row {
+    display: flex;
+  }
+  
+  .cell {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #27a102; /* Secondary green for cell borders */
+  }
+  
+  .snake {
+    background-color: #1fea00; /* Bright green for snake */
+    border-radius: 4px;
+  }
+  
+  .food {
+    background-color: #27a102; /* Secondary green for food */
+    border-radius: 50%;
+  }
+  
+  .game-over {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.9); /* Black background for game over */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 10;
+  }
+  
+  .game-over h2 {
+    margin-bottom: 20px;
+    color: #1fea00; /* Bright green for game over text */
+  }
+  
+  .game-over button {
+    padding: 10px 20px;
+    background-color: #27a102; /* Secondary green button */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .game-over button:hover {
+    background-color: #1c6000; /* Dark green on hover */
+  }
+  

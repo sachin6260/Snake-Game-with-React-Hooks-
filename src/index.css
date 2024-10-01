@@ -1,0 +1,129 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Body Styling */
+body {
+  background-color: #000000 ; /* Dark Green background */
+  color: #1fea00; /* Bright green text */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+/* Typography */
+h1, h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #1fea00; /* Bright green for headings */
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #27a102; /* Secondary green for subheadings */
+}
+
+/* App Container */
+.app {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #002f06; /* Black background */
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Score Board Styling */
+.score-board {
+   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+  gap: 20px;
+}
+
+.score-board button {
+  background-color: #27a102; /* Secondary green button */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.score-board button:hover {
+  background-color: #1c6000; /* Darker green for hover */
+}
+
+/* Button Styling */
+button {
+  background-color: #1fea00; /* Bright green button */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 8px;
+}
+
+button:hover {
+  background-color: #27a102; /* Darker green on hover */
+}
+
+/* Responsive Game Board */
+@media screen and (max-width: 600px) {
+  .game-board {
+    width: 300px;
+    height: 300px;
+  }
+
+  .cell {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+/* Animations */
+.snake {
+  background-color: #1fea00; /* Bright green for snake */
+  border-radius: 4px;
+  animation: pulse 0.2s ease-in-out alternate infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+.food {
+  background-color: #27a102; /* Secondary green for food */
+  border-radius: 50%;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0.6;
+  }
+}
